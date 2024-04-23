@@ -1,24 +1,21 @@
-
-
-
+/* Default styles for TypingText component */
 .TypingText h1 {
     color: #fff;
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: 600;
     margin-bottom: 20px; /* Add margin for spacing */
 }
 
-.TypingText span,
-.MadeWithLove span {
+.TypingText span {
     position: relative;
     color: #BD53ED; /* Color for GEN-Z-CONNECT */
 }
 
-.TypingText span::before,
-.MadeWithLove span::before {
-    content: "";
-    height: 30px;
-    width: 5px;
+.TypingText span::before {
+    content: " ";
+
+    height: 40px;
+    width: 6px;
     position: absolute;
     top: 50%;
     right: -8px;
@@ -27,20 +24,21 @@
     animation: blink 0.7s infinite;
 }
 
-.TypingText span.stop-blinking::before,
-.MadeWithLove span.stop-blinking::before {
+.TypingText span.stop-blinking::before {
     animation: none;
 }
 
-/* Different color for "Made with love" text */
-.MadeWithLove span {
-    color: #FF6B6B; /* Color for "Made with love" text */
-    font-size: 1.2rem; /* Smaller font size */
-}
 .TypingText h3 {
     font-size: 1.2rem; /* Adjust the font size as needed */
 }
 
 .TypingText h3 span {
     color: #d307a3; /* Color for "Made with love" text */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .TypingText h1 {
+        font-size: 2.4rem; /* Reduce font size for smaller screens */
+    }
 }

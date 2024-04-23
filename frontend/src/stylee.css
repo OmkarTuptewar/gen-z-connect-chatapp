@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.HomePage {
+    min-height: 100vh;
+    display: flex;
+    background-color: black;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .HomePage {
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive styles for larger screens */
+  @media (min-width: 769px) {
+    .HomePage {
+      flex-direction: row;
+    }
+  }
+  

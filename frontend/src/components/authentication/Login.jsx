@@ -56,7 +56,7 @@ const Login = () => {
      
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
-      history.push("/chat");
+      history.push("/chats");
     } catch (error) {
       if (error.response.status === 401) {
         // Handle incorrect email or password error
@@ -84,10 +84,13 @@ const Login = () => {
   };
 
   return (
-    <VStack spacing="10px">
+    <VStack spacing="10px" textColor="black" >
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
+                   isInvalid
+                   errorBorderColor='black.100' 
+                   _placeholder={{ opacity: 1, color: 'gray.500' }}
           value={email}
           type="email"
           placeholder="Enter Your Email Address"
@@ -98,10 +101,14 @@ const Login = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
+           isInvalid
+           errorBorderColor='black.100' 
+           _placeholder={{ opacity: 1, color: 'gray.500' }}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
             placeholder="Enter password"
+           
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -124,8 +131,8 @@ const Login = () => {
         colorScheme="red"
         width="100%"
         onClick={() => {
-          setEmail("guest@example.com");
-          setPassword("123456");
+          setEmail("robot@gmail.com");
+          setPassword("robot123");
         }}
       >
         Get Guest User Credentials

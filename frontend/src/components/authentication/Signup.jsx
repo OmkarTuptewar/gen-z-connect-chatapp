@@ -115,10 +115,14 @@ const Signup = () => {
   };
 
   return (
-    <VStack spacing="5px">
+    <VStack spacing="5px" textColor="black" >
       <FormControl id="name" isRequired>
         <FormLabel>Name</FormLabel>
         <Input
+                   isInvalid
+                   errorBorderColor='black.100' 
+                   _placeholder={{ opacity: 1, color: 'gray.500' }}
+          color="black"
           type="text"
           placeholder="Enter Your Name"
           value={name}
@@ -129,6 +133,9 @@ const Signup = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
         <Input
+                   isInvalid
+                   errorBorderColor='black.100' 
+                   _placeholder={{ opacity: 1, color: 'gray.500' }}
           type="email"
           placeholder="Enter Your Email"
           value={email}
@@ -140,6 +147,9 @@ const Signup = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
+                     isInvalid
+                     errorBorderColor='black.100' 
+                     _placeholder={{ opacity: 1, color: 'gray.500' }}
             type={show ? "text" : "password"}
             placeholder="Enter Your Password"
             value={password}
@@ -157,6 +167,9 @@ const Signup = () => {
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup size="md">
           <Input
+                     isInvalid
+                     errorBorderColor='black.100' 
+                     _placeholder={{ opacity: 1, color: 'gray.500' }}
             type={show ? "text" : "password"}
             placeholder="Confirm Your Password"
             value={confirmPassword}
@@ -173,6 +186,9 @@ const Signup = () => {
       <FormControl id="pic">
         <FormLabel>Profile Picture</FormLabel>
         <Input
+                   isInvalid
+                   errorBorderColor='black.100' 
+                   _placeholder={{ opacity: 1, color: 'gray.500' }}
           type="file"
           p={1.5}
           accept="image/*"
